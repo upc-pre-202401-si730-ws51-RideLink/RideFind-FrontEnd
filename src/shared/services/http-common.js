@@ -1,12 +1,7 @@
 import axios from 'axios';
 
-<<<<<<< Updated upstream
-// Cambia esta URL por la URL de tu API en Mocky.io
-const API_BASE_URL = 'https://run.mocky.io/v3/675dd1f7-0fa2-4c27-8f46-56be662a2b55';
-=======
 // URL de la API
 const API_BASE_URL = 'https://my-json-server.typicode.com/upc-pre-202401-si730-ws51-RideLink/RideFind-FakeAPI';
->>>>>>> Stashed changes
 
 const http = axios.create({
   baseURL: API_BASE_URL,
@@ -19,13 +14,8 @@ export async function obtenerVehiculos() {
     if (response.status !== 200) {
       throw new Error('No se pudo obtener la información de los vehículos');
     }
-<<<<<<< Updated upstream
-    const data = response.data;
-    return data.vehiculos; // Ajusta esto según la estructura de tu JSON en Mocky.io
-=======
-    // const data = response.data;
-    return response.data; // Ajusta esto según la estructura de tu JSON
->>>>>>> Stashed changes
+
+    return data.vehiculos; // Ajusta esto según la estructura de tu JSON
   } catch (error) {
     console.error('Error al obtener datos de vehículos:', error);
     return null;
