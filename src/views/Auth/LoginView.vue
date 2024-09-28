@@ -80,16 +80,16 @@ button {
   margin-top: 0.5rem;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #34d399;
+  background-color: #0097b2;
   color: white;
 }
 
 button:hover {
-  background-color: #53a37b;
+  background-color: #007ab2;
 }
 
 span a {
-  color: #34d399;
+  color: #0097b2;
 }
 
 .social-logo2 {

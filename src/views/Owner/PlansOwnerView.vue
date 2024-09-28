@@ -103,14 +103,14 @@ const handleSubmit = () => {
 }
 
 .card:hover .btncontainer {
-  background: linear-gradient(to top, #514d54, #4ae49a);
+  background: linear-gradient(to top, #514d54, #0097b2);
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 1rem;
-  color: #4ae49a;
+  color: #0097b2;
 }
 
 .buttoncontainer {
@@ -124,7 +124,7 @@ ul {
 
 .btncontainer {
   margin-top: 2rem;
-  background-color: #4ae49a;
+  background-color: #0097b2;
   color: rgb(32, 26, 85);
   border-radius: 1rem;
   padding: 0.67rem;

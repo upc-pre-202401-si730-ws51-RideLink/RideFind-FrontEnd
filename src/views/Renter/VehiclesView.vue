@@ -54,7 +54,7 @@ margin: -100px auto;
 
 h1 {
 text-align: center;
-color: #00BD7E;
+color: #0097b2;
 margin-bottom: 20px;
 font-size: 2.2rem;
 }

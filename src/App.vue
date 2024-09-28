@@ -48,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #a5bdabcb;
+  background-color: rgba(0, 151, 178, 0.2);
 }
 
 /* Estilos para el menú responsive */

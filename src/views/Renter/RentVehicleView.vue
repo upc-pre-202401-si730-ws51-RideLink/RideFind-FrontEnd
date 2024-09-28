@@ -102,7 +102,7 @@ export default {
 }
 
 .buttonwpp {
-  background-color: #01C880;
+  background-color: #0097b2;
   color: black;
   border-radius: 1rem;
   border: 0.1rem;
