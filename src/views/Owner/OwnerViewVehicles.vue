@@ -89,7 +89,7 @@
   }
   
   .small-button {
-    background-color: #34D399; 
+    background-color: #0097b2;
     color: white;
     padding: 8px 8px;
     border: none;
@@ -97,7 +97,7 @@
   }
   
   .big-button {
-    background-color: #34D399; 
+    background-color: #0097b2;
     color: white;
     padding: 8px 8px;
     border: none;

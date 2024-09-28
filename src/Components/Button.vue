@@ -6,7 +6,7 @@
 
 <style scoped>
 .my-button {
-  background-color: #34D399;
+  background-color: #0097b2;
   color: white;
   border: none;
   border-radius: 5px;
@@ -15,6 +15,6 @@
 }
 
 .my-button:hover {
-  background-color: #53a37b;
+  background-color: #0097b2;
 }
 </style>

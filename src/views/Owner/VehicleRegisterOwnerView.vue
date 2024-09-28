@@ -60,13 +60,13 @@ input {
 }
 button {
   padding: 0.5rem 1rem;
-  background-color: #4CAF50;
+  background-color: #0097b2;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 button:hover {
-  background-color: #45a049;
+  background-color: #0097b2;
 }
 </style>
