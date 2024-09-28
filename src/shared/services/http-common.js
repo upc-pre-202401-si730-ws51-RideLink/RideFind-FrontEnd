@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // URL de la API
-const API_BASE_URL = 'https://my-json-server.typicode.com/upc-pre-202401-si730-ws51-RideLink/RideFind-FakeAPI';
+const API_BASE_URL = 'http://localhost:3000';
 
 const http = axios.create({
   baseURL: API_BASE_URL,
@@ -15,7 +15,7 @@ export async function obtenerVehiculos() {
       throw new Error('No se pudo obtener la información de los vehículos');
     }
 
-    return data.vehiculos; // Ajusta esto según la estructura de tu JSON
+    return response.data; // Ajusta esto según la estructura de tu JSON
   } catch (error) {
     console.error('Error al obtener datos de vehículos:', error);
     return null;
@@ -25,12 +25,12 @@ export async function obtenerVehiculos() {
 
 export async function obtenerUsuarios() {
   try {
-    const response = await http.get('/');
+    const response = await http.get('/usuarios');
     if (response.status !== 200) {
       throw new Error('No se pudo obtener la información de los usuarios');
     }
-    const data = response.data;
-    return data.usuarios; // Ajusta esto según la estructura de tu JSON
+
+    return response.data; // Ajusta esto según la estructura de tu JSON
   } catch (error) {
     console.error('Error al obtener datos de usuarios:', error);
     return null;

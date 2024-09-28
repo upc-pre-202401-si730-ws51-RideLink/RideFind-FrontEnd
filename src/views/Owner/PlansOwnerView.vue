@@ -24,10 +24,10 @@ const handleSubmit = () => {
         <div class="card">
           <h2 class="cardtext">Plan 1</h2>
           <ul>
-            <li>Plan Gratuito</li>
-            <li>S/. 0 por 1 mes</li>
-            <li>Después, S/. 5 por cada alquiler</li>
+            <li>Plan RideStart</li>
+            <li>S/. 0 por mes</li>
             <li>Alquila 3 vehículos</li>
+            <li>Después, S/. 5 por cada alquiler</li>
           </ul>
           <div class="buttoncontainer">
             <pv-button class="btncontainer" @click="handleSubmit">Lo quiero</pv-button>
@@ -37,10 +37,11 @@ const handleSubmit = () => {
         <div class="card">
           <h2 class="cardtext">Plan 2</h2>
           <ul>
-            <li>Plan Standard</li>
-            <li>S/. 10 por 1 mes</li>
-            <li>Después, S/. 6 por cada alquiler</li>
+            <li>Plan RidePlus</li>
+            <li>S/. 10 por mes</li>
             <li>Alquila 50 vehículos</li>
+            <li>Después, S/. 5 por cada alquiler</li>
+
           </ul>
           <div class="buttoncontainer">
             <pv-button class="btncontainer" @click="handleSubmit">Lo quiero</pv-button>
@@ -50,8 +51,8 @@ const handleSubmit = () => {
         <div class="card">
           <h2 class="cardtext">Plan 3</h2>
           <ul>
-            <li>Plan Entusiasta</li>
-            <li>Precio: S/. 21/mes</li>
+            <li>Plan RidePro</li>
+            <li>Precio: S/. 30/mes</li>
             <li>Beneficios: Sin comisiones.</li>
             <li>Alquila vehículos ilimitados.</li>
           </ul>
