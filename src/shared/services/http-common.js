@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // URL de la API
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://my-json-server.typicode.com/upc-pre-202401-si730-ws51-RideLink/RideFind-FakeAPI';
 
 const http = axios.create({
   baseURL: API_BASE_URL,
