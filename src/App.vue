@@ -50,6 +50,10 @@ nav a {
 nav a:hover {
   background-color: rgba(0, 151, 178, 0.2);
 }
+nav a.router-link-active {
+  background-color: rgba(0, 151, 178, 0.4);
+  font-weight: 500;
+}
 
 /* Estilos para el menú responsive */
 @media screen and (max-width: 600px) {
