@@ -8,7 +8,7 @@ export default {
     return {
       usuarios: [],
       checked: false,
-      profileImage      
+      profileImage
     };
   },
   async created() {
@@ -22,14 +22,15 @@ export default {
     <pv-card class="card">
       <template #content>
         <div class="containerent">
-          <div class="profileImage">
-            <pv-image :src="profileImage" alt="profile Image" width="350" preview />
+          <div class="titleinformation">
+            <h1>Mi Perfil</h1>
           </div>
 
-          <div class="rentdescription">
-            <div class="titleinformation">
-              <h1>Mi Perfil</h1>
+          <div class="profile-content">
+            <div class="profileImage">
+              <pv-image :src="profileImage" alt="profile Image" width="350" preview />
             </div>
+
             <div class="containersinformation">
               <div class="container1information" v-if="usuarios.length > 0">
                 <div class="categories">
@@ -40,119 +41,115 @@ export default {
                 </div>
               </div>
             </div>
-            <pv-button class="buttonwpp" label="Contactar"><p>Ver más</p></pv-button>
           </div>
+
+          <pv-button class="buttonwpp" label="Ver más"></pv-button>
         </div>
       </template>
     </pv-card>
   </div>
 </template>
+
 <style scoped>
 .Rent {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10%;
-  margin-bottom: 5%;
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+.card {
+  background: white;
+  border: 2px solid #0097b2;
+  border-radius: 8px;
+  width: 700px;
+  max-width: 800px;
+  padding: 1rem;
+  margin-top: -10vh;
 }
 
 .containerent {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  max-width: 100%;
-}
-
-.profileImage {
-  margin: 1rem;
-}
-
-.rentdescription {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin: 1rem;
+  padding: 1rem;
 }
 
 .titleinformation h1 {
-  margin: 2rem;
+  color: #0097b2;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
   text-align: center;
+  margin-top: -5vh;
+}
+
+.profile-content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profileImage {
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .containersinformation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
+  width: 80%;
 }
 
 .container1information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1rem;
-  border: solid;
-  border-radius: 1rem;
-  margin: 0.5rem;
+  border: 3px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: white;
   width: 100%;
-  max-width: 500px;
+}
+
+.categories p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  color: #333;
 }
 
 .buttonwpp {
-  margin: 1rem;
+  margin-top: 2rem;
   background-color: #0097b2;
-  color: black;
-  border-radius: 1rem;
-  border: 0.1rem;
-  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .buttonwpp:hover {
-  transform: scale(1.1);
+  background-color: #007a8c;
 }
 
 @media (max-width: 768px) {
   .Rent {
-    margin: 0 5%;
+    padding: 1rem;
   }
 
-  .containerent {
-    flex-direction: column;
-    align-items: center;
+  .profile-content {
+    gap: 1rem;
   }
 
-  .profileImage,
-  .rentdescription {
-    margin: 0.5rem;
+  .profileImage {
+    width: 100%;
   }
 
   .container1information {
-    width: 90%;
-    max-width: 90%;
+    padding: 1rem;
   }
 
-  .buttonwpp {
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 769px) {
-  .containerent {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .rentdescription {
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .buttonwpp {
-    align-self: flex-start;
-  }
 }
 </style>
