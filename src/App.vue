@@ -6,9 +6,12 @@ import Logo from '@/Components/Logo.vue'
 <template>
   <header>
     <div class="wrapper">
-      <nav>
-        <RouterLink to="/register">Sing Up</RouterLink>
-        <RouterLink to="/login">Sing In</RouterLink>
+      <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle menu">
+        <span class="hamburger-icon"></span>
+      </button>
+      <nav :class="{ 'show': isMenuOpen }">
+        <RouterLink to="/register">Sign Up</RouterLink>
+        <RouterLink to="/login">Sign In</RouterLink>
         <RouterLink to="/Recommendations">Recommendations</RouterLink>
         <RouterLink to="/myProfile">My Profile</RouterLink>
         <RouterLink to="/vehicles">See Vehicles</RouterLink>
@@ -29,6 +32,7 @@ import Logo from '@/Components/Logo.vue'
   max-width: 1700px;
   margin: 10px auto 90px auto;
   padding: 0 15px;
+  position: relative;
 }
 
 nav {
@@ -55,12 +59,77 @@ nav a.router-link-active {
   font-weight: 500;
 }
 
-/* Estilos para el menú responsive */
+
+.menu-toggle {
+  display: none;
+  background:#0097b2;
+
+  border: none;
+  position: absolute;
+  left: 15px;
+  top: -60px;
+  z-index: 1000;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 8px 6px;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  bottom: -8px;
+}
+
 @media screen and (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    right: 15px;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    z-index:1000;
+    width:200px;
+
+  }
+
+  nav.show {
+    display: block;
+  }
+
   nav a {
     float: none;
     display: block;
-    text-align: center;
+    text-align: left;
+    padding: 15px 25px;
   }
 }
 </style>
